@@ -1,11 +1,11 @@
-<% @article.comments.each do |c| %>
+<% unless @article.archived? %>
   <p>
     <strong>Commenter:</strong>
-    <%= c.commenter %>
+    <%= comment.commenter %>
   </p>
 
   <p>
     <strong>Comment:</strong>
-    <%= c.body %>
+    <%= comment.body %>
   </p>
 <% end %>
